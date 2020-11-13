@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #009900; -fx-border-color: #804000;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.BlackJackController">
+   <children>
+      <Label fx:id="spillerSum" layoutX="249.0" layoutY="250.0" text="hei" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="dealerSum" layoutX="253.0" layoutY="150.0" text="hoi" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@kort/bakgrunn.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="11.0" layoutY="147.0" text="Bank:" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="319.0" text="Pot:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="tipp" layoutX="15.0" layoutY="347.0" mnemonicParsing="false" onAction="#betClick" prefHeight="40.0" prefWidth="79.0" style="-fx-background-radius: 100;" text="Bet">
+         <font>
+            <Font name="Candara" size="16.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.41" specularConstant="0.38" specularExponent="28.97" surfaceScale="2.25">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#fff959" />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="stand" layoutX="105.0" layoutY="347.0" mnemonicParsing="false" onAction="#clickStand" prefHeight="40.0" prefWidth="79.0" style="-fx-background-radius: 100;" text="Stand">
+         <font>
+            <Font name="Candara" size="16.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.41" specularConstant="0.38" specularExponent="28.97" surfaceScale="2.25">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#ff5656" />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="hit" layoutX="14.0" layoutY="347.0" minWidth="59.2" mnemonicParsing="false" onAction="#hitClick" prefHeight="40.0" prefWidth="79.0" style="-fx-background-radius: 100;" text="Hit">
+         <font>
+            <Font name="Candara" size="16.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.41" specularConstant="0.38" specularExponent="28.97" surfaceScale="2.25">
+               <light>
+                  <Light.Distant color="#60ff70" />
+               </light>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </Button>
+      <Label fx:id="outcome" alignment="CENTER" contentDisplay="CENTER" layoutX="275.0" layoutY="174.0" prefHeight="52.0" prefWidth="191.0" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="36.0" />
+         </font></Label>
+      <Label fx:id="bank" layoutX="65.0" layoutY="147.0" prefHeight="20.0" prefWidth="70.0" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="pot" layoutX="55.0" layoutY="319.0" prefHeight="18.0" prefWidth="70.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="bilde1" fitHeight="115.5" fitWidth="84.7" layoutX="312.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" rotate="-15.0" />
+      <ImageView fx:id="bilde2" fitHeight="115.5" fitWidth="84.7" layoutX="329.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" rotate="-10.0" />
+      <ImageView fx:id="bilde3" fitHeight="115.5" fitWidth="84.7" layoutX="344.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" rotate="-5.0" />
+      <ImageView fx:id="bilde4" fitHeight="115.5" fitWidth="84.7" layoutX="359.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="bilde5" fitHeight="115.5" fitWidth="84.7" layoutX="374.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" rotate="5.0" />
+      <ImageView fx:id="dbilde1" fitHeight="115.5" fitWidth="84.7" layoutX="312.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" rotate="-15.0" />
+      <ImageView fx:id="dbilde2" fitHeight="115.5" fitWidth="84.7" layoutX="329.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" rotate="-10.0" />
+      <ImageView fx:id="dbilde3" fitHeight="115.5" fitWidth="84.7" layoutX="344.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" rotate="-5.0" />
+      <ImageView fx:id="dbilde4" fitHeight="115.5" fitWidth="84.7" layoutX="359.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="dbilde5" fitHeight="115.5" fitWidth="84.7" layoutX="374.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" rotate="5.0" />
+      <ImageView fitHeight="115.5" fitWidth="84.7" layoutX="486.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@kort/bakside.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="info" alignment="TOP_LEFT" layoutX="11.0" layoutY="69.0" prefHeight="52.0" prefWidth="191.0" text="Welcome to&#10;Blackjack!" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Candara Italic" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="femhundre" layoutX="121.0" layoutY="247.0" mnemonicParsing="false" onAction="#clickFemhundre" prefHeight="55.0" prefWidth="55.0" style="-fx-background-radius: 100; -fx-background-color: #846394;" text="\$500" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Candara Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="hundre" layoutX="121.0" layoutY="180.0" mnemonicParsing="false" onAction="#clickhundre" prefHeight="55.0" prefWidth="55.0" style="-fx-background-radius: 100; -fx-background-color: #25449B;" text="\$100" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Candara Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="tjuefem" layoutX="54.0" layoutY="180.0" mnemonicParsing="false" onAction="#clickTjuefem" prefHeight="55.0" prefWidth="55.0" style="-fx-background-radius: 100; -fx-background-color: #C3383D;" text="\$25" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Candara Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ti" layoutX="54.0" layoutY="247.0" mnemonicParsing="false" onAction="#clickTi" prefHeight="55.0" prefWidth="55.0" style="-fx-background-radius: 100; -fx-background-color: #22A271;" text="\$10" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Candara Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="zero" layoutX="10.0" layoutY="252.0" mnemonicParsing="false" onAction="#clickNull" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 100; -fx-background-color: #2C3932;" text="\$0" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Candara Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="bet" layoutX="55.0" layoutY="319.0" prefHeight="18.0" prefWidth="70.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="en" layoutX="10.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickEn" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 100; -fx-background-color: #FCFBFF;" text="\$1">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Candara Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="tilbake" layoutX="14.0" layoutY="22.0" minWidth="59.2" mnemonicParsing="false" onAction="#tilbake" prefHeight="40.0" prefWidth="79.0" style="-fx-background-radius: 100;" text="Back">
+         <font>
+            <Font name="Candara Italic" size="16.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.41" specularConstant="0.38" specularExponent="28.97" surfaceScale="2.25">
+               <light>
+                  <Light.Distant color="#61f9ff" />
+               </light>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </Button>
+      <Label fx:id="navn" layoutX="11.0" layoutY="117.0" prefHeight="28.0" prefWidth="174.0" textAlignment="CENTER" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Candara" size="22.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="start" layoutX="-2.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #009900; -fx-border-color: #804000;">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@kort/bilde.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="enterName" layoutX="344.0" layoutY="293.0" mnemonicParsing="false" onAction="#enterNameClick" prefHeight="28.0" prefWidth="79.0" style="-fx-background-radius: 100;" text="Enter" textFill="#191919" visible="false">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.41" specularConstant="0.38" specularExponent="28.97" surfaceScale="2.25">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#6c71ff" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <TextField fx:id="skrivNavn" layoutX="257.0" layoutY="295.0" prefHeight="26.0" prefWidth="79.0" visible="false">
+               <font>
+                  <Font name="Candara" size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="writeName" layoutX="201.0" layoutY="287.0" prefHeight="44.0" prefWidth="55.0" text="Name:" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="load1" layoutX="74.0" layoutY="340.0" mnemonicParsing="false" onAction="#load1" prefHeight="35.0" prefWidth="103.0" style="-fx-background-radius: 10;" text="1" textFill="#191919" visible="false">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.41" specularConstant="0.38" specularExponent="28.97" surfaceScale="2.25">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#ff7070" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="load2" layoutX="186.0" layoutY="340.0" mnemonicParsing="false" onAction="#load2" prefHeight="35.0" prefWidth="103.0" style="-fx-background-radius: 10;" text="2" textFill="#191919" visible="false">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.41" specularConstant="0.38" specularExponent="28.97" surfaceScale="2.25">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#ff7070" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="load3" layoutX="298.0" layoutY="340.0" mnemonicParsing="false" onAction="#load3" prefHeight="35.0" prefWidth="103.0" style="-fx-background-radius: 10;" text="3" textFill="#191919" visible="false">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.41" specularConstant="0.38" specularExponent="28.97" surfaceScale="2.25">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#ff7070" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="load4" layoutX="410.0" layoutY="340.0" mnemonicParsing="false" onAction="#load4" prefHeight="35.0" prefWidth="103.0" style="-fx-background-radius: 10;" text="4" textFill="#191919" visible="false">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.41" specularConstant="0.38" specularExponent="28.97" surfaceScale="2.25">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#ff7070" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="load" layoutX="245.0" layoutY="331.0" mnemonicParsing="false" onAction="#clickLoad" prefHeight="35.0" prefWidth="103.0" style="-fx-background-radius: 100;" text="Load a save" textFill="#191919">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.41" specularConstant="0.38" specularExponent="28.97" surfaceScale="2.25">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#ff7070" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="newGame" layoutX="245.0" layoutY="287.0" mnemonicParsing="false" onAction="#newGameClick" prefHeight="35.0" prefWidth="103.0" style="-fx-background-radius: 100;" text="New Game" textFill="#191919">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.41" specularConstant="0.38" specularExponent="28.97" surfaceScale="2.25">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#8370ff" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Label fx:id="saveInfo" alignment="CENTER" layoutX="171.0" layoutY="297.0" prefHeight="44.0" prefWidth="254.0" text="Choose a save to overwrite:" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="tilbake2" layoutX="20.0" layoutY="30.0" minWidth="59.2" mnemonicParsing="false" onAction="#tilbake2" prefHeight="40.0" prefWidth="79.0" style="-fx-background-radius: 100;" text="Back" visible="false">
+               <font>
+                  <Font name="Candara Italic" size="16.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.41" specularConstant="0.38" specularExponent="28.97" surfaceScale="2.25">
+                     <light>
+                        <Light.Distant color="#61f9ff" />
+                     </light>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+   <effect>
+      <InnerShadow height="30.0" radius="14.5" width="30.0" />
+   </effect>
+</AnchorPane>
