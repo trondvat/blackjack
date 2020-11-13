@@ -16,3 +16,5 @@ My first Java program! Blackjack game created with JavaFX.
         - for the "Add VM options", try to Run the app.java file (to failure) once first.
   
   5. Run App.java
+  
+  6. Have fun
